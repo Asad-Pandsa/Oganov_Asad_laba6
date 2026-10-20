@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 20px;
+  color: #29251f;
+  background: #f5f1e9;
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  width: min(100%, 620px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: #493b2d;
+}
+
+.intro {
+  margin: 0 0 28px;
+  color: #6f675d;
+}
+
+.artist-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.artist-card {
+  display: flex;
+  width: min(100%, 360px);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  color: inherit;
+  background: #fff;
+  box-shadow: 0 4px 14px rgb(52 41 28 / 12%);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.artist-card:hover,
+.artist-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgb(52 41 28 / 18%);
+}
+
+.artist-card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #eee9df;
+}
+
+.artist-card span {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.artist-page {
+  display: flex;
+  width: min(100%, 900px);
+  align-items: flex-start;
+  gap: 32px;
+  margin: 30px auto;
+  padding: 28px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgb(52 41 28 / 12%);
+}
+
+.portrait {
+  width: min(40%, 300px);
+  max-height: 420px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #eee9df;
+}
+
+.artist-page article {
+  flex: 1;
+  line-height: 1.7;
+}
+
+.artist-page h1 {
+  margin-top: 0;
+}
+
+.dates {
+  color: #827361;
+  font-weight: 700;
+}
+
+.views {
+  color: #6f675d;
+  font-size: 0.95rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 1px solid #72502c;
+  border-radius: 8px;
+  color: #fff;
+  background: #72502c;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: #392714;
+  background: #e9dfd1;
+}
+
+@media (max-width: 640px) {
+  .artist-page {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .portrait {
+    width: min(100%, 300px);
+    max-height: 340px;
+  }
+
+  .artist-page article {
+    width: 100%;
+  }
+}
